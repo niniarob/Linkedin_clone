@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Poppins:wght@300;400;500&display=swap');
 
 
-
 *,*::after,
 *::before{
     margin: 0;
@@ -19,14 +18,8 @@ body{
     background-color: var(--backGround);
     min-width: 100%;
     font-family: "DM Sans";
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 .impDiv{
-    width: 100%;
-    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,10 +27,7 @@ body{
 }
 header{
     width:95%;
-    /* min-width: 100%; */
-    /* width: 99%; */
     background-color: var(--headerBackColor);
-    /* border: 2px solid red; */
     height: 80px;
     padding-left: 3%;
     padding-right: 3%;
@@ -46,15 +36,12 @@ header{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     align-items: center;
-    /* justify-content: ; */
 }
 .logoImage{
     width: 98px;
     height: 29px;
-    /* border: 2px solid red; */
 }
 .headerLinks{
-    /* border: 1px solid  green; */
     display: flex;
     align-items: center;
     gap: 28px;
@@ -107,15 +94,14 @@ ul li:hover{
     
 }
 main{
-    width: 88%;
+    width: 87%;
     height: 100vh;
     margin-top: 35px;
     display: flex;
     flex-direction: row;
-    /* border: 2px solid red; */
+    gap: 40px;
 }
 .userInformation{
-    /* border: 1px solid gray; */
     width: 340px;
     height:460px;
     background-image: url(./assets/Backgground.png);
@@ -126,13 +112,10 @@ main{
     align-items: end;
     border-bottom-right-radius: 43px;
     border-bottom-left-radius:43px ;
-    /* border: 1px solid #cccccc; */
-    /* display:; */
 }
 .users{    
     border-radius: 40px;
     width: 100%;
-    /* height: 76%; */
     background-color: var(--backGround);
     border: 1px solid #cccccc;
     display: flex;
@@ -141,17 +124,14 @@ main{
     padding-bottom: 20px;
 }
 .userPhotoName{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     position: relative;
     top: -35px;
-    /* background-color: wheat; */
 }
 .userPhoto{
-    /* border: 1px solid  red; */
     background-color: #747171;
     width: 70px;
     height: 70px;
@@ -164,10 +144,8 @@ main{
 }
 .userInformation-paragraphs{
     width: 85%;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     margin-top: 15px;
 }
 .secondGrayLine{
@@ -178,6 +156,288 @@ p{
     color: #343333;
     font-family: "DM Sans";
     font-size: 18.317px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.crownDiv{
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-top: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.access{
+    width: 85%;
+}
+.text-access{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 18.317px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.photoAndText{
+    display: flex;
+    gap: 10px;
+    margin-top: 2px;
+}
+.postPart{
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.postSomething{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.postInput{
+    width: 100%;
+    height: 55px;
+    border-radius: 51px;
+    padding-left: 30px;
+    border: 1px solid #CCC;
+}
+.postInput::placeholder{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;   
+}
+.iconsLinks{
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.icons h5{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.sortBy{
+    width: 90%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.secLine{
+    width: 80%;
+    height: 1px;
+    border: 1px solid #ccc;
+}
+.top{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.arrow{
+    width: 8px;
+    height: 7px;
+    position: relative;
+    bottom: -3px;
+
+}
+.sort{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Top{
+    font-weight: 500;
+}
+.postCard{
+    border: 1px solid #CCCCCC;
+    height: 690px;
+    border-radius: 50px;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.secPostCard{
+    margin-top: 60px;
+}
+.userNameAndPhoto{
+    position: relative;
+    width: 90%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.namee{
+    width: 80px;
+    height: 80px;
+}
+.name{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 21.98px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.userPrg{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.closeArrow{
+    position: absolute;
+    right:0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+.arrowC{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.follow{
+    width: 100px;
+    height: 35px;
+    border: 1px solid #cccccc;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #343333;
+}
+.statusPart{
+    width: 90%;
+    margin-top: 40px;
+}
+.statusPart{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.imageSrc{
+    width: 90%;
+    margin-top: 25px;
+}
+.imageSRC{
+    width: 100%;
+    height: 300px;
+}
+.comment{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    display: flex;
+    width: 90%;
+    justify-content: end;  
+    margin-top: 20px;
+}
+.lin{
+    width: 90%;
+}
+.comments{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 5px;
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+.addToFeedPart{
+    border: 1px solid #cccccc;
+    height: 540px;
+    border-radius: 30px;
+    width: 361px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feed{
+    margin-top: 30px;
+    width: 90%;
+}
+h{
+    color: #343333;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 21.98px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.feedLists{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 20px; 
+}
+.lists{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.feedUsers{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 14.653px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.prg{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.recomendation{
+    width: 90%;
+    margin-top: 20px;
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 14.653px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
