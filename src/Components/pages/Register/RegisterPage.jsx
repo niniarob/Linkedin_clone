@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import RegisterLinkedinLogo from "../Register/resources/Logo 1.svg";
 import { UserAuth } from "../../../Context/Context";
 import { Link, useNavigate } from "react-router-dom";
+import { getAuth, updateProfile } from "firebase/auth";
 
 const RegisterPage = () => {
   const months = [
@@ -19,7 +20,7 @@ const RegisterPage = () => {
     "December",
   ];
 
-  const { createUser } = UserAuth();
+  const { createUser, user } = UserAuth();
   const navigate = useNavigate();
 
   const [userName, setUserName] = useState("");
@@ -33,14 +34,24 @@ const RegisterPage = () => {
     setError("");
     try {
       await createUser(email, password, userName, profilePhoto);
+      const auth = getAuth();
+      updateProfile(auth.currentUser, {
+        displayName: userName,
+        photoURL: "https://example.com/jane-q-user/profile.jpg",
+      });
+
       navigate("/");
-    } catch (e) {
-      setError(e.message);
-      console.log(e.message);
+    } catch (err) {
+      setError(err.message);
+      console.log(err.message);
     }
     setUserName("");
     setEmail("");
     setPassword("");
+
+    // user.displayName = userName;
+    // console.log(user.displayName);
+    console.log(user);
   };
 
   return (
@@ -55,7 +66,7 @@ const RegisterPage = () => {
           value={userName}
         />
         <input
-          type="email"
+          type="text"
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
@@ -66,7 +77,11 @@ const RegisterPage = () => {
             {months.map((el) => {
               let monthNum = 1;
 
-              return <option value={monthNum++}>{el}</option>;
+              return (
+                <option key={el} value={monthNum++}>
+                  {el}
+                </option>
+              );
             })}
           </select>
           <select>
@@ -90,6 +105,7 @@ const RegisterPage = () => {
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
+        {error && <p style={{ color: "red" }}>{error}</p>}
         <p>
           By clicking Agree & Join, you agree to the LinkedIn{" "}
           <span>User Agreement, Privacy Policy</span>, and{" "}

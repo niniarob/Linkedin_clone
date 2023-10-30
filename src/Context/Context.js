@@ -13,17 +13,12 @@ const UserContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
 
-  const createUser = (email, password, userName, profilePhoto) => {
-    createUserWithEmailAndPassword(auth, email, password);
-    updateProfile(auth.currentUser, {
-      displayName: userName,
-      photoURL: profilePhoto,
-    });
-    console.log(auth.currentUser);
+  const createUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const signIn = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password);
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   const logout = () => {
@@ -32,9 +27,11 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      updateProfile(auth.currentUser, {
-        displayName: "genadiko",
-      });
+      // if (auth.currentUser == null) {
+      //   updateProfile(auth.currentUser, {
+      //     displayName: user.displayName,
+      //   });
+      // }
       console.log(currentUser);
       setUser(currentUser);
     });
@@ -44,7 +41,7 @@ export const AuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ createUser, user, logout, signIn }}>
+    <UserContext.Provider value={{ createUser, user, logout, signIn, auth }}>
       {children}
     </UserContext.Provider>
   );

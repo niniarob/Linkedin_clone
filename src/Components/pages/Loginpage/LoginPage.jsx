@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import LoginLinkedinLogo from "../Loginpage/resources/Logo 1.svg";
 import { UserAuth } from "../../../Context/Context";
 import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../../../firebase";
 
 const LoginPage = () => {
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -16,16 +17,15 @@ const LoginPage = () => {
     setError("");
 
     try {
-      await signIn(loginEmail, loginPassword);
+      await signIn(email, password);
       navigate("/NewsFeed");
-    } catch (e) {
-      setError(e.message);
-      console.log(e.message);
+    } catch (err) {
+      setError(err.message);
     }
 
-    setLoginEmail("");
+    setEmail("");
 
-    setLoginPassword("");
+    setPassword("");
   };
 
   return (
@@ -34,17 +34,18 @@ const LoginPage = () => {
       <form className="input-form" onSubmit={handleSubmit}>
         <h1>Make the most of your professional life</h1>
         <input
-          type="email"
+          type="text"
           placeholder="Email or telephone number"
-          onChange={(e) => setLoginEmail(e.target.value)}
-          value={loginEmail}
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
         <input
           type="password"
           placeholder="Password (6 or more characters)"
-          onChange={(e) => setLoginPassword(e.target.value)}
-          value={loginPassword}
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
         />
+        {error && <p style={{ color: "red" }}>{error}</p>}
         <p>
           By clicking Agree & Join, you agree to the LinkedIn{" "}
           <span>User Agreement, Privacy Policy</span>, and{" "}
