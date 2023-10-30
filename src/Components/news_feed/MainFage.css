@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Poppins:wght@300;400;500&display=swap');
+
+
+*,*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans";
+}
+:root{
+    --backGround:#FFF;
+    --darkGray:#747171;
+    --letterColor:#343333;
+    --headerBackColor:#f2f2f2;
+}
+body{
+    background-color: var(--backGround);
+    min-width: 100%;
+    font-family: "DM Sans";
+}
+.impDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    width:95%;
+    background-color: var(--headerBackColor);
+    height: 80px;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    align-items: center;
+}
+.logoImage{
+    width: 98px;
+    height: 29px;
+}
+.headerLinks{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+ul{
+    display: flex;
+    gap: 20px;
+}
+ul li{
+    list-style: none;
+    text-decoration: none;
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+ul li:hover{
+    color: var(--darkGray);
+}
+.pseudoElement{
+    position: relative;
+    color: var(--letterColor);
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.pseudoElement::after{
+    content: ''; 
+    position: absolute;
+    top: -1px;
+    right: -4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: red;
+    margin-left: 10px;   
+}
+.buttonImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(./assets/vector-profile-icon-260nw-380603071.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1px solid var(--darkGray);
+    
+}
+main{
+    width: 87%;
+    height: 100vh;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.userInformation{
+    width: 340px;
+    height:460px;
+    background-image: url(./assets/Backgground.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    border-bottom-right-radius: 43px;
+    border-bottom-left-radius:43px ;
+}
+.users{    
+    border-radius: 40px;
+    width: 100%;
+    background-color: var(--backGround);
+    border: 1px solid #cccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.userPhotoName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top: -35px;
+}
+.userPhoto{
+    background-color: #747171;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.line {
+    width: 100%;
+    border: 1px solid  #CCC;;
+    margin-top: 22px;
+}
+.userInformation-paragraphs{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.secondGrayLine{
+    margin-top: 15px;
+}
+p{
+    text-align: start;
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 18.317px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.crownDiv{
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-top: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.access{
+    width: 85%;
+}
+.text-access{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 18.317px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.photoAndText{
+    display: flex;
+    gap: 10px;
+    margin-top: 2px;
+}
+.postPart{
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.postSomething{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.postInput{
+    width: 100%;
+    height: 55px;
+    border-radius: 51px;
+    padding-left: 30px;
+    border: 1px solid #CCC;
+}
+.postInput::placeholder{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;   
+}
+.iconsLinks{
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.icons h5{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.sortBy{
+    width: 90%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.secLine{
+    width: 80%;
+    height: 1px;
+    border: 1px solid #ccc;
+}
+.top{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.arrow{
+    width: 8px;
+    height: 7px;
+    position: relative;
+    bottom: -3px;
+
+}
+.sort{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Top{
+    font-weight: 500;
+}
+.postCard{
+    border: 1px solid #CCCCCC;
+    height: 690px;
+    border-radius: 50px;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.secPostCard{
+    margin-top: 60px;
+}
+.userNameAndPhoto{
+    position: relative;
+    width: 90%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.namee{
+    width: 80px;
+    height: 80px;
+}
+.name{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 21.98px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.userPrg{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.closeArrow{
+    position: absolute;
+    right:0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+.arrowC{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.follow{
+    width: 100px;
+    height: 35px;
+    border: 1px solid #cccccc;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #343333;
+}
+.statusPart{
+    width: 90%;
+    margin-top: 40px;
+}
+.statusPart{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.imageSrc{
+    width: 90%;
+    margin-top: 25px;
+}
+.imageSRC{
+    width: 100%;
+    height: 300px;
+}
+.comment{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    display: flex;
+    width: 90%;
+    justify-content: end;  
+    margin-top: 20px;
+}
+.lin{
+    width: 90%;
+}
+.comments{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 5px;
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+.addToFeedPart{
+    border: 1px solid #cccccc;
+    height: 540px;
+    border-radius: 30px;
+    width: 361px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feed{
+    margin-top: 30px;
+    width: 90%;
+}
+h{
+    color: #343333;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 21.98px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.feedLists{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 20px; 
+}
+.lists{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.feedUsers{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 14.653px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.prg{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.recomendation{
+    width: 90%;
+    margin-top: 20px;
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 14.653px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
