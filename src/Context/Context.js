@@ -7,11 +7,13 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../firebase";
+import { db, colRef, addPost } from "../firebase";
+import { addDoc, onSnapshot } from "firebase/firestore";
 
 const UserContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState([]);
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);

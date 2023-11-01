@@ -16,12 +16,12 @@
 }
 body {
   background-color: var(--backGround);
-  min-width: 100%;
+  /* min-width: 100%; */
   font-family: "DM Sans";
 }
 .impDiv {
-  display: grid;
-  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -53,25 +53,26 @@ ul {
 }
 ul li {
   list-style: none;
-  text-decoration: none;
+  /* text-decoration: none; */
   color: #343333;
-  font-family: "DM Sans";
+  /* font-family: "DM Sans"; */
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  /* font-style: normal; */
+  /* font-weight: 400; */
+  /* line-height: normal; */
 }
 ul li:hover {
   color: var(--darkGray);
+  cursor: pointer;
 }
 .pseudoElement {
   position: relative;
-  color: var(--letterColor);
-  font-family: "DM Sans";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  /* color: var(--letterColor); */
+  /* font-family: "DM Sans"; */
+  /* font-size: 20px; */
+  /* font-style: normal; */
+  /* font-weight: 500; */
+  /* line-height: normal; */
 }
 .pseudoElement::after {
   content: "";
@@ -95,7 +96,7 @@ ul li:hover {
 }
 main {
   width: 87%;
-  height: 100vh;
+  /* height: 100vh; */
   margin-top: 35px;
   display: flex;
   flex-direction: row;
@@ -108,7 +109,7 @@ main {
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: end;
+  /* justify-content: end; */
   align-items: end;
   border-bottom-right-radius: 43px;
   border-bottom-left-radius: 43px;
@@ -154,15 +155,15 @@ main {
 p {
   text-align: start;
   color: #343333;
-  font-family: "DM Sans";
+  /* font-family: "DM Sans"; */
   font-size: 18.317px;
-  font-style: normal;
+  /* font-style: normal; */
   font-weight: 500;
-  line-height: normal;
+  /* line-height: normal; */
 }
 .crownDiv {
   width: 340px;
-  display: flex;
+  display: grid;
   justify-content: center;
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -170,16 +171,12 @@ p {
   padding-top: 7px;
   padding-bottom: 7px;
 }
-.access {
+/* .access {
   width: 85%;
-}
+} */
 .text-access {
   color: #343333;
-  font-family: "DM Sans";
   font-size: 18.317px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .photoAndText {
   display: flex;
@@ -205,18 +202,17 @@ p {
   border-radius: 51px;
   padding-left: 30px;
   border: 1px solid #ccc;
+  outline: none;
 }
 .postInput::placeholder {
   color: #343333;
-  font-family: "DM Sans";
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .iconsLinks {
-  width: 95%;
+  width: 50%;
   display: flex;
+  gap: 20px;
+  justify-content: end;
   justify-content: space-evenly;
 }
 .icons {
@@ -226,11 +222,7 @@ p {
 }
 .icons h5 {
   color: #343333;
-  font-family: "DM Sans";
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .sortBy {
   width: 90%;
@@ -241,7 +233,6 @@ p {
 }
 .secLine {
   width: 80%;
-  height: 1px;
   border: 1px solid #ccc;
 }
 .top {
@@ -257,18 +248,14 @@ p {
 }
 .sort {
   color: #343333;
-  font-family: "DM Sans";
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .Top {
   font-weight: 500;
 }
 .postCard {
   border: 1px solid #cccccc;
-  height: fit-content;
+  /* height: fit-content; */
   max-height: 740px;
   border-radius: 50px;
   width: 100%;

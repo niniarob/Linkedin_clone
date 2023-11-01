@@ -5,7 +5,7 @@ import Component from "./assets/Component 3.png";
 import Vlad from "./assets/Vlad.png";
 import Coment from "./assets/Coment.png";
 
-const Post = ({ post, posts, handleDelete, userName }) => {
+const Post = ({ post, postsArr, handleDelete, userName }) => {
   return (
     <div className="postCard">
       <div className="userNameAndPhoto">
@@ -20,13 +20,13 @@ const Post = ({ post, posts, handleDelete, userName }) => {
             <img
               src={Times}
               alt="Times.png"
-              onClick={() => handleDelete(post.postId)}
+              onClick={() => handleDelete(post.id)}
             />
           </div>
           <div className="follow">Follow</div>
         </div>
       </div>
-      <p className="statusPart">{post.content}</p>
+      <p className="statusPart">{post.postText}</p>
       <div className="imageSrc">
         {/* <img className="imageSRC" src="" alt="" /> */}
       </div>

@@ -30,6 +30,9 @@
     url("./Components/pages/Register/resources/Ellipse\ 12\ \(1\).svg");
   background-repeat: no-repeat;
   background-position: 100% 0%, 95% 80%, 80% 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20%;
 }
 
 .register-wrapper h1 {
@@ -99,4 +102,11 @@
   border: none;
   font-size: 20px;
   margin: auto;
+}
+.footer {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  justify-content: baseline;
+  align-items: baseline;
 }
