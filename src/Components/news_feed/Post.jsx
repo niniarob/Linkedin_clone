@@ -2,8 +2,10 @@ import React from "react";
 import Ellips from "./assets/Ellipse 16 (1).png";
 import Times from "./assets/Times.png";
 import Component from "./assets/Component 3.png";
-import Vlad from "./assets/Vlad.png";
+// import Vlad from "./assets/Vlad.png";
 import Coment from "./assets/Coment.png";
+
+
 
 const Post = ({
   post,

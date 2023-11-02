@@ -8,13 +8,15 @@ import Video from "./assets/2 1.png";
 import Event from "./assets/3 1.png";
 import Article from "./assets/4 1.png";
 import Arrow from "./assets/Angle-down.png";
-import Avatar from "./assets/Avatar.png";
 import Post from "./Post";
 import { UserAuth } from "../../Context/Context";
-import { getAuth, updateProfile } from "firebase/auth";
+// import { getAuth, updateProfile } from "firebase/auth";
 import { colRef, db } from "../../firebase";
+
+
 import { useNavigate } from "react-router-dom";
 import AddFeed from "./AddFeed";
+
 import {
   addDoc,
   onSnapshot,
@@ -241,6 +243,7 @@ export default function FileUpload() {
             );
           })}
         </div>
+
         <div className="addToFeedPart">
           <div className="feed">
             <h4>Add to your feed</h4>
@@ -253,6 +256,7 @@ export default function FileUpload() {
           </div>
           <p className="recomendation">View all recommendations</p>
         </div>
+
       </main>
       <footer></footer>
     </div>

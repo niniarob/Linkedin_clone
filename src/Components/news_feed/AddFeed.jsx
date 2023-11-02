@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const AddFeed = ({ img, name }) => {
@@ -18,3 +19,4 @@ const AddFeed = ({ img, name }) => {
 };
 
 export default AddFeed;
+
