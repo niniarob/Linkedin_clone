@@ -4,11 +4,11 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-  updateProfile,
+  // updateProfile,
 } from "firebase/auth";
 import { auth } from "../firebase";
-import { db, colRef, addPost } from "../firebase";
-import { addDoc, onSnapshot } from "firebase/firestore";
+// import { db, colRef, addPost } from "../firebase";
+// import { addDoc, onSnapshot } from "firebase/firestore";
 
 const UserContext = createContext();
 

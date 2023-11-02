@@ -8,11 +8,13 @@ import Video from "./assets/2 1.png";
 import Event from "./assets/3 1.png";
 import Article from "./assets/4 1.png";
 import Arrow from "./assets/Angle-down.png";
-import Avatar from "./assets/Avatar.png";
 import Post from "./Post";
 import { UserAuth } from "../../Context/Context";
-import { getAuth, updateProfile } from "firebase/auth";
+// import { getAuth, updateProfile } from "firebase/auth";
 import { colRef, db } from "../../firebase";
+import AddFeed from "./AddFeed";
+
+
 import {
   addDoc,
   onSnapshot,
@@ -188,47 +190,7 @@ export default function FileUpload() {
             );
           })}
         </div>
-        <div className="addToFeedPart">
-          <div className="feed">
-            <h4>Add to your feed</h4>
-            <div className="feedLists">
-              <div className="lists">
-                <img src={Avatar} alt="Avatar.png" />
-                <div className="secLists">
-                  <p className="feedUsers">ANZ OILFIELD SERVICES </p>
-                  <p className="prg">Company, Oil & Energy</p>
-                  <div className="follow">Follow</div>
-                </div>
-              </div>
-              <div className="lists">
-                <img src={Avatar} alt="Avatar.png" />
-                <div className="secLists">
-                  <p className="feedUsers">ANZ OILFIELD SERVICES </p>
-                  <p className="prg">Company, Oil & Energy</p>
-                  <div className="follow">Follow</div>
-                </div>
-              </div>
-              <div className="lists">
-                <img src={Avatar} alt="Avatar.png" />
-                <div className="secLists">
-                  <p className="feedUsers">ANZ OILFIELD SERVICES </p>
-                  <p className="prg">Company, Oil & Energy</p>
-                  <div className="follow">Follow</div>
-                </div>
-              </div>
-              <div className="lists">
-                <img src={Avatar} alt="Avatar.png" />
-                <div className="secLists">
-                  <p className="feedUsers">ANZ OILFIELD SERVICES </p>
-                  <p className="prg">Company, Oil & Energy</p>
-                  <div className="follow">Follow</div>
-                </div>
-              </div>
-            </div>
-            <div></div>
-          </div>
-          <p className="recomendation">View all recommendations</p>
-        </div>
+       <AddFeed />
       </main>
       <footer></footer>
     </div>
