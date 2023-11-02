@@ -19,18 +19,12 @@ body {
     background-color: var(--backGround);
     width: 100%;
     font-family: "DM Sans";
-    border: 1px solid black;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 .logoImput{
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
     gap: 25px;
-    align-items: center;
-    
+    align-items: center;  
 }
 .searchInputInProfile{
     width: 300px;

@@ -1,4 +1,3 @@
-import "./Analytics.css";
 import Eye from "./assets/eye.svg";
 import Users from "./assets/users-alt.svg";
 import Bar from "./assets/chart-bar-alt.svg";

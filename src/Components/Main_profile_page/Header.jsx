@@ -1,7 +1,7 @@
 import './Header.css'
 import Logo from './assets/Logo 1 (1).png'
 import EllipseProfile from './assets/Ellipse 14.svg'
-import Search from "./assets/search.svg"
+// import Search from "./assets/search.svg"
 
 
 

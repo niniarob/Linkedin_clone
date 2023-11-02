@@ -2,7 +2,6 @@
     width: 100%;
 }
 .userss{
-    /* border: 1px solid red; */
     display: flex;
     gap: 10px;
 }
@@ -38,6 +37,5 @@
     line-height: normal;
 }
 .lastMore{
-    /* border: 1px solid red; */
     margin-top: -35px;
 }

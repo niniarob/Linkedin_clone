@@ -17,8 +17,6 @@
 body {
   background-color: var(--backGround);
   min-width: 100%;
-  /* display: flex; */
-  /* align-items: center; */
   font-family: "DM Sans";
 }
 .radius{
@@ -34,18 +32,9 @@ body {
     background-image: url(./assets/pen.svg);
     background-repeat: no-repeat;
     background-position:90% 15%;
-    /* position: relative; */
-    /* background-clip: calc(100% - 20px); */
-    /* right: -100px; */
-    /* background-position:right; */
-
 }
 .mainInformationPage{
-    /* width: 100%; */
     margin-top: 25px;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* border: 2px solid red; */
 }
 .sameStyles{
     color: #343333;
@@ -71,5 +60,4 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    /* width: 00px; */
 }

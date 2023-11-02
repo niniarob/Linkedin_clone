@@ -96,15 +96,16 @@ ul li:hover {
   margin: auto;
 }
 main {
-  width: 87%;
+  width: 90%;
   /* height: 100vh; */
   margin-top: 35px;
+  margin-bottom: 30%;
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 20px;
 }
 .userInformation {
-  width: 340px;
+  width: 320px;
   height: 460px;
   background-image: url(./assets/Backgground.png);
   background-size: 100%;
@@ -142,7 +143,7 @@ main {
 .line {
   width: 100%;
   border: 1px solid #ccc;
-  margin-top: 22px;
+  /* margin-top: 22px; */
 }
 .userInformation-paragraphs {
   width: 85%;
@@ -163,7 +164,7 @@ p {
   /* line-height: normal; */
 }
 .crownDiv {
-  width: 340px;
+  width: 320px;
   display: grid;
   justify-content: center;
   border: 1px solid #ccc;
@@ -185,7 +186,8 @@ p {
   margin-top: 2px;
 }
 .postPart {
-  width: 768px;
+  /* border: 1px solid red; */
+  width: 708px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,7 +235,7 @@ p {
   justify-content: space-between;
 }
 .secLine {
-  width: 80%;
+  width: 76%;
   border: 1px solid #ccc;
 }
 .top {

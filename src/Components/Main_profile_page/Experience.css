@@ -17,18 +17,8 @@
 body {
   background-color: var(--backGround);
   min-width: 100%;
-  /* display: flex; */
-  /* align-items: center; */
   font-family: "DM Sans";
 }
-/* span{
-    color: #343333;
-    font-family: "DM Sans";
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-} */
 .width{
     width: 50%;
 }

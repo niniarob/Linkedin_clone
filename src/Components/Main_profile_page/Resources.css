@@ -1,8 +1,6 @@
-
 .eyee{
     display: flex;
     width: 100%;
-    /* border: 1px solid red; */
     margin-top: -15px;
     gap: 10px;
 }
@@ -25,7 +23,6 @@
 }
 .showMore{
     width: 100%;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: end;
 }

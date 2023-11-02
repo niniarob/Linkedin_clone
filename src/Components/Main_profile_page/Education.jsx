@@ -6,7 +6,6 @@ import Photo2 from "./assets/Photo2.png";
 export default function Education(){
     return(
         <>
-        {/* <div> */}
         <div className='mainInfo radius width'>
             <h2 className='sameStyles'>Education</h2>
             <div className="photo-text">
@@ -29,9 +28,7 @@ export default function Education(){
                 Sep 2008- Jun 2019
                 </p>
             </div>
-
         </div>
-        {/* </div> */}
         </>
     )
 }

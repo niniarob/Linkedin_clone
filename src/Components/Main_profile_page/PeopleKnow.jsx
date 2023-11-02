@@ -1,4 +1,4 @@
-import "./PeopleKnow.css";
+// import "./PeopleKnow.css";
 import UserOne from "./assets/Ellipse 32.svg";
 
 
@@ -37,16 +37,6 @@ export default function PeopleKnow(){
                 </div>
                 </div>
             </div>
-            {/* <div className="userss">
-                <img src={UserOne} alt="Ellipse 32"/>
-                <div className="usersNam">
-                <h2 className="names">Emily Gomer</h2>
-                <p className="prg">Junior Financial Specialist at Diploma</p>
-                <div className="followDiv">
-                    <p>+ Follow</p>
-                </div>
-                </div>
-            </div> */}
             <div className="showMore lastShowMore">
                 <p className="showMoreText">Show more</p>
             </div>

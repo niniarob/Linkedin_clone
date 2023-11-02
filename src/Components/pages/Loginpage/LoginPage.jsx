@@ -62,7 +62,7 @@ const LoginPage = () => {
         </form>
       </div>
 
-      <div className="footer">
+      <div className="loginFooter">
         <p>About</p>
         <p>Accessibility</p>
         <p>User Agreement</p>
@@ -71,7 +71,7 @@ const LoginPage = () => {
         <p>Copyright Policy</p>
         <p>Brand Policy</p>
         <p>Guest Controls</p>
-        <p>Community Guidelines</p>
+        <p> Guidelines</p>
         <p>Language</p>
       </div>
     </div>

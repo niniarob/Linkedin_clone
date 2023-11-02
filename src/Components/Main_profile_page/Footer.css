@@ -1,0 +1,53 @@
+.footerSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.first{
+    display: flex;
+    gap: 40px;
+}
+.second{
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.right p{
+    color: #747171;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+.right .foo{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; 
+}
+.second p{
+    color: #747171;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400; 
+}
+
+.third{
+    margin-bottom: 3%;
+}
+.boot{
+    margin-top: 40px;
+}

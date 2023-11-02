@@ -5,7 +5,6 @@ import "./Activity.css";
 export default function Activity(){
     return(
         <>
-        {/* <div className='impDiv'> */}
             <div className='mainInfo radius'>
                 <h4 className='titleStyles'>Open to work</h4>
                 <p className='paragraphStyles'>UI/UX Designer, Copywriter and Sales Manager</p>
@@ -15,7 +14,7 @@ export default function Activity(){
             </div>
             <div className="connections">
             <span className="blueText">
-                Show details
+            500+ connections
                 </span>
             </div>
             <div className='mainInfo radius'>
@@ -34,7 +33,6 @@ export default function Activity(){
                 <p className="showMoreText">Show more</p>
             </div>
             </div>
-        {/* </div> */}
         </>
     )
 }

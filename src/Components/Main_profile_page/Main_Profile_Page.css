@@ -1,7 +1,5 @@
-
 .mainInformationPage{
     width: 90%;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -10,27 +8,18 @@
 }
 .column{
     width: 65%;
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 .secondPart{
     width: 35%;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 55px; */
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
-    gap: 15px
-    ;
+    gap: 15px;
 }
 .experience-education{
     width: 100%;
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
     gap: 20px;
-    /* border: 1px solid red; */
 }

@@ -121,7 +121,7 @@ const RegisterPage = () => {
           </p>
         </form>
       </div>
-      <div className="footer">
+      <div className="loginFooter registrationFooter">
         <p>About</p>
         <p>Accessibility</p>
         <p>User Agreement</p>
@@ -130,7 +130,7 @@ const RegisterPage = () => {
         <p>Copyright Policy</p>
         <p>Brand Policy</p>
         <p>Guest Controls</p>
-        <p>Community Guidelines</p>
+        <p>Community </p>
         <p>Language</p>
       </div>
     </div>

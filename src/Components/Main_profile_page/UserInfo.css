@@ -17,30 +17,23 @@
 body {
   background-color: var(--backGround);
   min-width: 100%;
-  /* display: flex; */
-  /* align-items: center; */
   font-family: "DM Sans";
 }
 .userInfoBackground{
     width: 90%;
     height: 500px ;
-    /* border: 1px solid red; */
     background-image: url(./assets/Background\ \(1\).png);
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
     align-items: end;
-    /* border: 1px solid var(--darkGray); */
-    /* border-radius: 35px; */
     margin-top: 40px;
 }
 .userInfo{
     background-image: url(./assets/bookmark\ 1.png);
-    /* url("./assets/camera.svg"); */
     background-repeat: no-repeat;
     width: 100%;
     height: 65%;
-    /* border: 1px solid rgb(128, 0, 0); */
     display: flex;
     background-color: #f2f2f2;
     border-radius: 30px;
@@ -49,7 +42,6 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-
 }
 .cameraPen{
     position: absolute;
@@ -60,11 +52,9 @@ body {
     gap: 16px;
 }
 .userPhotoNameProfetion{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: -300px; */
 }
 
 .userPohoProfilePage{
@@ -72,7 +62,6 @@ body {
     height: 180px;
     position: relative;
     top: -90px;
-    /* border: 1px solid black; */
 }
 .userInfoName{
     color: #343333;
@@ -82,7 +71,6 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    /* border: 1px solid red; */
     margin-top: -85px;
 }
 .userInfoProfetion{
@@ -95,7 +83,6 @@ body {
     line-height: normal;
 }
 .contactInfoPart{
-    /* border: 1px solid green; */
     width: 86%;
     display: flex;
     justify-content: end;
@@ -111,15 +98,12 @@ body {
     line-height: normal;
 }
 .locationContact{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-    /* text-align: center; */
 }
 .publicProfile{
-    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -153,18 +137,27 @@ body {
     line-height: normal;
 }
 .linkButtons{
-    width: 66%;
+    width: 45%;
     margin-top: 15px;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 15%;
+    justify-content: center;
+    gap: 20px;
+}
+.two{
+    width: 100px;
+}
+.one{
+    width: 180px;
 }
 .butto{
     border: 0.916px solid #1380BB;
     border-radius: 30px;
-    padding: 1%;
+    padding-left:1%;
+    padding-right:1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .openTo{
     color: #1380BB;
@@ -179,7 +172,7 @@ body {
 .grayBorder{
     border-radius: 40px;
     border: 0.916px solid #CCC;
-    width: 130px;
+    width: 90px;
 }
 .more{
     color: #747171;

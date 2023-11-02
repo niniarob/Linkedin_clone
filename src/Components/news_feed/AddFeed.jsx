@@ -32,14 +32,6 @@ export default function AddFeed() {
                   <div className="follow">Follow</div>
                 </div>
               </div>
-              <div className="lists">
-                <img src={Avatar} alt="Avatar.png" />
-                <div className="secLists">
-                  <p className="feedUsers">ANZ OILFIELD SERVICES </p>
-                  <p className="prg">Company, Oil & Energy</p>
-                  <div className="follow">Follow</div>
-                </div>
-              </div>
             </div>
             <div></div>
           </div>

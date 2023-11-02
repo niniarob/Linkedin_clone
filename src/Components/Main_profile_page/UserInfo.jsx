@@ -32,12 +32,12 @@ export default function UserInfo(){
                         
                     </div>
                     <div className=' linkButtons'>
-                        <div className='butto'>
+                        <div className='butto two'>
                             <p className='openTo'>
                                 Open to
                             </p>
                         </div>
-                        <div className='butto'>
+                        <div className='butto one'>
                             <p className='openTo'>
                                 Add profile section
                             </p>

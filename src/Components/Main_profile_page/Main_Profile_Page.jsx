@@ -10,6 +10,7 @@ import Resources from "./Resources";
 import Analytics from "./Analytics";
 import PeopleViewed from './PeopleViewed';
 import PeopleKnow from './PeopleKnow';
+import Footer from './Footer';
 
 export default function Main_Profile_Page() {
     return(
@@ -35,6 +36,7 @@ export default function Main_Profile_Page() {
             <PeopleKnow/>
             </div>
         </div>
+            <Footer/>
         </div>
     )
 }
