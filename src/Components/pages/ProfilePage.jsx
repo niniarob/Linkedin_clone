@@ -1,14 +1,6 @@
-import React from "react";
-import './ProfilePage.css';
+import React, { useState, useRef } from "react";
+import "./ProfilePage.css";
 
-const ProfilePage = () => {
-
-
-
-  return <div>
-    
-
-  </div>;
-};
+const ProfilePage = () => {};
 
 export default ProfilePage;

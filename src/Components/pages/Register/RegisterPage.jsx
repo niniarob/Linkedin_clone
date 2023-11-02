@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import RegisterLinkedinLogo from "../Register/resources/Logo 1.svg";
 import { UserAuth } from "../../../Context/Context";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, updateProfile } from "firebase/auth";
+import { addDoc, collection, onSnapshot } from "firebase/firestore";
+import { db } from "../../../firebase";
 
 const RegisterPage = () => {
   const months = [
@@ -37,7 +39,8 @@ const RegisterPage = () => {
       const auth = getAuth();
       updateProfile(auth.currentUser, {
         displayName: userName,
-        photoURL: "https://example.com/jane-q-user/profile.jpg",
+        photoURL:
+          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
       });
 
       navigate("/");
@@ -45,6 +48,11 @@ const RegisterPage = () => {
       setError(err.message);
       console.log(err.message);
     }
+
+    const addUser = addDoc(collection(db, "Users"), {
+      userName: userName,
+    });
+
     setUserName("");
     setEmail("");
     setPassword("");
