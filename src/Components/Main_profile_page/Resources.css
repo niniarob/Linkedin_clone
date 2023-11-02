@@ -1,0 +1,38 @@
+
+.eyee{
+    display: flex;
+    width: 100%;
+    /* border: 1px solid red; */
+    margin-top: -15px;
+    gap: 10px;
+}
+.private{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;   
+}
+.linediv{
+    width: 100%;
+    border: 1px solid #cccccc;
+}
+.gap{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.showMore{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: end;
+}
+.showMoreText{
+    font-size: 15px;
+}
+.bottom{
+    padding-bottom: 2%;
+    padding-top: 3%;
+}

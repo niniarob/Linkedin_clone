@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Poppins:wght@300;400;500&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans";
+}
+:root {
+  --backGround: #fff;
+  --darkGray: #747171;
+  --letterColor: #343333;
+  --headerBackColor: #f2f2f2;
+}
+body {
+  background-color: var(--backGround);
+  min-width: 100%;
+  /* display: flex; */
+  /* align-items: center; */
+  font-family: "DM Sans";
+}
+.radius{
+    border-radius: 30px;
+    border: 1px solid #cccccc;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    padding-right: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url(./assets/pen.svg);
+    background-repeat: no-repeat;
+    background-position:90% 15%;
+    /* position: relative; */
+    /* background-clip: calc(100% - 20px); */
+    /* right: -100px; */
+    /* background-position:right; */
+
+}
+.mainInformationPage{
+    /* width: 100%; */
+    margin-top: 25px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* border: 2px solid red; */
+}
+.sameStyles{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.titleStyles{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: -10px;
+    line-height: normal; 
+}
+.paragraphStyles{
+    color: #343333;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* width: 00px; */
+}
