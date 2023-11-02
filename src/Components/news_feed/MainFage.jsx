@@ -12,8 +12,10 @@ import Post from "./Post";
 import { UserAuth } from "../../Context/Context";
 // import { getAuth, updateProfile } from "firebase/auth";
 import { colRef, db } from "../../firebase";
-import AddFeed from "./AddFeed";
 
+
+import { useNavigate } from "react-router-dom";
+import AddFeed from "./AddFeed";
 
 import {
   addDoc,
@@ -24,15 +26,29 @@ import {
   query,
   orderBy,
   serverTimestamp,
+  collection,
+  limit,
 } from "firebase/firestore";
 
 export default function FileUpload() {
   const [text, setText] = useState("");
   const [posts, setPosts] = useState([]);
 
-  const { user, auth } = UserAuth();
+  const { user, logout, auth } = UserAuth();
+  const navigate = useNavigate();
 
   const q = query(colRef, orderBy("createdAt", "desc"));
+  const feedQuery = query(collection(db, "Users"), limit(4));
+
+  const [users, setUsers] = useState([]);
+
+  useEffect(
+    () =>
+      onSnapshot(feedQuery, (snapshot) =>
+        setUsers(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+      ),
+    []
+  );
 
   useEffect(
     () =>
@@ -55,27 +71,43 @@ export default function FileUpload() {
     setText("");
   };
 
+  const [uploadImage, setUploadImage] = useState(null);
+  const inputRef = useRef(null);
+
+  const handleClick = () => {
+    inputRef.current.click();
+  };
+
+  const toProfilePage = () => {
+    navigate("/ProfilePage");
+  };
+
+  const handleLogOut = async () => {
+    try {
+      await logout();
+      navigate("/");
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+
+  console.log(user.photoURL, "outside");
+  console.log(uploadImage);
+
+  const handleChange = (e) => {
+    setUploadImage(e.target.files[0]);
+  };
   const handleDelete = (postId) => {
     setPosts(posts.filter((post) => post.id !== postId));
     const docRef = doc(db, "posts", postId);
     deleteDoc(docRef);
+    console.log(user);
   };
 
-  const handleShow = () => {};
-
-  // const fileInputRef = useRef(null);
-
-  // const handleFileUpload = () => {
-  //   fileInputRef.current.click();
-  // };
-
-  // const handleFileChange = (e) => {
-  //   const file = e.target.files[0];
-  //   if (file) {
-  //     console.log("Selected File:", file);
-
-  //   }
-  // };
+  const [isActive, setIsActive] = useState(false);
+  const handleShow = () => {
+    setIsActive(!isActive);
+  };
 
   return (
     <div className="impDiv">
@@ -90,21 +122,21 @@ export default function FileUpload() {
             <li>Notifications</li>
           </ul>
           <div className="profile-button">
-            <button className="buttonImg" onClick={() => handleShow()}></button>
-            <div className="show">
-              <button>Log out</button>
-              <button>Profile page</button>
+            <button className="buttonImg" onClick={handleShow}>
+              {uploadImage ? (
+                <img
+                  src={URL.createObjectURL(uploadImage)}
+                  className="profile-photo"
+                />
+              ) : (
+                <img className="profile-photo" src={user.photoURL} />
+              )}
+            </button>
+            <div className={isActive ? "show" : "hide"}>
+              <button onClick={handleLogOut}>Log out</button>
+              <button onClick={toProfilePage}>Profile page</button>
             </div>
           </div>
-
-          {/* <div>
-            <input
-              type="file"
-              ref={fileInputRef}
-              style={{ display: "none" }}
-              onChange={handleFileChange}
-            />
-          </div> */}
         </div>
       </header>
 
@@ -113,7 +145,19 @@ export default function FileUpload() {
           <div className="userInformation">
             <div className="users">
               <div className="userPhotoName">
-                <div className="userPhoto"></div>
+                <div className="userPhoto" onClick={handleClick}>
+                  {uploadImage ? (
+                    <img src={URL.createObjectURL(uploadImage)} />
+                  ) : (
+                    <img src={user.photoURL} />
+                  )}
+                  <input
+                    type="file"
+                    onChange={(e) => handleChange(e)}
+                    ref={inputRef}
+                    style={{ display: "none" }}
+                  />
+                </div>
                 <h4 className="userName">{user.displayName}</h4>
               </div>
               <div className="line"></div>
@@ -142,7 +186,14 @@ export default function FileUpload() {
         </div>
         <div className="postPart">
           <form onSubmit={handleSubmit} className="postSomething">
-            <img className="profilePhoto" src={Ellipse} alt="Ellipse 16" />
+            {uploadImage ? (
+              <img
+                src={URL.createObjectURL(uploadImage)}
+                className="profile-photo"
+              />
+            ) : (
+              <img className="profile-photo" src={user.photoURL} />
+            )}
 
             <input
               className="postInput"
@@ -186,11 +237,26 @@ export default function FileUpload() {
                 posts={posts}
                 handleDelete={handleDelete}
                 userName={user.displayName}
+                uploadImage={uploadImage}
+                defaultImage={user.photoURL}
               />
             );
           })}
         </div>
-       <AddFeed />
+
+        <div className="addToFeedPart">
+          <div className="feed">
+            <h4>Add to your feed</h4>
+            <div className="feedLists">
+              {users.map((feed) => {
+                return <AddFeed img={Avatar} name={feed.userName} />;
+              })}
+            </div>
+            <div></div>
+          </div>
+          <p className="recomendation">View all recommendations</p>
+        </div>
+
       </main>
       <footer></footer>
     </div>

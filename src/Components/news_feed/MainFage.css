@@ -85,7 +85,7 @@ ul li:hover {
   background-color: red;
   margin-left: 10px;
 }
-.buttonImg {
+/* .buttonImg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -94,6 +94,22 @@ ul li:hover {
   background-repeat: no-repeat;
   border: 1px solid var(--darkGray);
   margin: auto;
+} */
+
+.buttonImg {
+  border: none;
+}
+
+.feedPhoto {
+  width: 85px;
+  border-radius: 50%;
+}
+
+.buttonImg img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--darkGray);
 }
 main {
   width: 87%;
@@ -133,12 +149,19 @@ main {
   position: relative;
   top: -35px;
 }
-.userPhoto {
+.userPhoto img {
   background-color: #747171;
   width: 70px;
   height: 70px;
   border-radius: 50%;
 }
+
+.profile-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
 .line {
   width: 100%;
   border: 1px solid #ccc;
@@ -258,20 +281,20 @@ p {
 .profile-button {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .show {
   display: grid;
-  position: relative;
-  top: 10px;
+  position: absolute;
+  top: 70px;
+  right: 30px;
   width: 120px;
   height: 100px;
   background-color: rgb(210, 193, 193);
   border-radius: 10px;
   padding: 10px;
   gap: 5px;
-  opacity: 0.5;
   box-shadow: 0px 5px 20px 0px #000000b1;
 }
 
@@ -280,12 +303,18 @@ p {
 }
 
 .show button {
-  background-color: rgb(9, 106, 142);
+  background-color: rgb(57, 161, 199);
   color: white;
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.show button:hover {
+  opacity: 0.5;
+  transition: 170ms;
 }
 
 .postCard {
