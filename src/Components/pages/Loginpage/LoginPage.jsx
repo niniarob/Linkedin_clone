@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import LoginLinkedinLogo from "../Loginpage/resources/Logo 1.svg";
 import { UserAuth } from "../../../Context/Context";
 import { Link, useNavigate } from "react-router-dom";
-// import { auth } from "../../../firebase";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");

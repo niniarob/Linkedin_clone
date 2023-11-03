@@ -1,20 +1,9 @@
 import React from "react";
-import Ellips from "./assets/Ellipse 16 (1).png";
 import Times from "./assets/Times.png";
 import Component from "./assets/Component 3.png";
-// import Vlad from "./assets/Vlad.png";
 import Coment from "./assets/Coment.png";
 
-
-
-const Post = ({
-  post,
-  postsArr,
-  handleDelete,
-  userName,
-  uploadImage,
-  defaultImage,
-}) => {
+const Post = ({ post, handleDelete, userName, uploadImage, defaultImage }) => {
   return (
     <div className="postCard">
       <div className="userNameAndPhoto">
@@ -43,9 +32,7 @@ const Post = ({
         </div>
       </div>
       <p className="statusPart">{post.postText}</p>
-      <div className="imageSrc">
-        {/* <img className="imageSRC" src="" alt="" /> */}
-      </div>
+      <div className="imageSrc"></div>
       <div className="comment">80 Comments</div>
       <div className="line lin"></div>
       <div className="comments">

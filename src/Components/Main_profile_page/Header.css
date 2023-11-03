@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Poppins:wght@300;400;500&display=swap");
 
-
 *,
 *::after,
 *::before {
@@ -16,44 +15,51 @@
   --headerBackColor: #f2f2f2;
 }
 body {
-    background-color: var(--backGround);
-    width: 100%;
-    font-family: "DM Sans";
-    border: 1px solid black;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+  background-color: var(--backGround);
+  width: 100%;
+  /* border: 1px solid black; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
-.logoImput{
-    /* border: 2px solid green; */
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    align-items: center;
-    
+.logoImput {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
 }
-.searchInputInProfile{
-    width: 300px;
-    height: 36px;
-    flex-shrink: 0; 
-    border-radius: 20px;
-    background-color: var(--headerBackColor);
-    border: 1px solid #CCC;
+.searchInputInProfile {
+  width: 300px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background-color: var(--headerBackColor);
+  border: 1px solid #ccc;
+  padding-left: 20px;
+  outline: none;
 }
-.searchInputInProfile::placeholder{
-    color: #343333;
-    font-family: "DM Sans";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-left: 15%;
-    background-image: url(./assets/search.svg);
-    background-repeat: no-repeat;
-    background-position: 20px center;
+.searchInputInProfile::placeholder {
+  color: #343333;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 10%;
+  background-image: url(./assets/search.svg);
+  background-repeat: no-repeat;
+  background-position: 0px center;
 }
-.listsImg{
-    display: flex;
-    gap: 20px;
-    align-items: center;
+.listsImg {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.listsImg li:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.listsImg img {
+  width: 50px;
+  border-radius: 50%;
 }

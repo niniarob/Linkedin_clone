@@ -1,7 +1,7 @@
-
 import React from "react";
+import "../news_feed/AddFeed.css";
 
-const AddFeed = ({ img, name }) => {
+const AddFeed = ({ name }) => {
   return (
     <div className="lists">
       <img
@@ -19,4 +19,3 @@ const AddFeed = ({ img, name }) => {
 };
 
 export default AddFeed;
-

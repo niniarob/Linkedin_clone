@@ -14,11 +14,7 @@
   --letterColor: #343333;
   --headerBackColor: #f2f2f2;
 }
-body {
-  background-color: var(--backGround);
-  /* min-width: 100%; */
-  font-family: "DM Sans";
-}
+
 .impDiv {
   display: flex;
   flex-direction: column;
@@ -53,13 +49,8 @@ ul {
 }
 ul li {
   list-style: none;
-  /* text-decoration: none; */
   color: #343333;
-  /* font-family: "DM Sans"; */
   font-size: 15px;
-  /* font-style: normal; */
-  /* font-weight: 400; */
-  /* line-height: normal; */
 }
 ul li:hover {
   color: var(--darkGray);
@@ -67,12 +58,6 @@ ul li:hover {
 }
 .pseudoElement {
   position: relative;
-  /* color: var(--letterColor); */
-  /* font-family: "DM Sans"; */
-  /* font-size: 20px; */
-  /* font-style: normal; */
-  /* font-weight: 500; */
-  /* line-height: normal; */
 }
 .pseudoElement::after {
   content: "";
@@ -85,24 +70,9 @@ ul li:hover {
   background-color: red;
   margin-left: 10px;
 }
-/* .buttonImg {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-image: url(./assets/vector-profile-icon-260nw-380603071.webp);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  border: 1px solid var(--darkGray);
-  margin: auto;
-} */
 
 .buttonImg {
   border: none;
-}
-
-.feedPhoto {
-  width: 85px;
-  border-radius: 50%;
 }
 
 .buttonImg img {
@@ -110,6 +80,7 @@ ul li:hover {
   height: 40px;
   border-radius: 50%;
   border: 1px solid var(--darkGray);
+  cursor: pointer;
 }
 main {
   width: 87%;
@@ -117,12 +88,13 @@ main {
   margin-top: 35px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 40px;
 }
 .userInformation {
   width: 340px;
   height: 460px;
-  background-image: url(./assets/Backgground.png);
+  background-image: url("./assets/Backgground.png");
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
@@ -154,6 +126,7 @@ main {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .profile-photo {
@@ -173,17 +146,18 @@ main {
   flex-direction: column;
   margin-top: 15px;
 }
+.userInformation-paragraphs p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .secondGrayLine {
   margin-top: 15px;
 }
 p {
   text-align: start;
   color: #343333;
-  /* font-family: "DM Sans"; */
   font-size: 18.317px;
-  /* font-style: normal; */
   font-weight: 500;
-  /* line-height: normal; */
 }
 .crownDiv {
   width: 340px;
@@ -206,6 +180,10 @@ p {
   display: flex;
   gap: 10px;
   margin-top: 2px;
+}
+.photoAndText p:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .postPart {
   width: 768px;
@@ -233,20 +211,18 @@ p {
   font-size: 16px;
 }
 .iconsLinks {
-  width: 50%;
   display: flex;
-  gap: 20px;
-  justify-content: end;
-  justify-content: space-evenly;
+  gap: 30px;
 }
 .icons {
   display: flex;
   gap: 5px;
   align-items: center;
+  cursor: pointer;
 }
 .icons h5 {
   color: #343333;
-  font-size: 16px;
+  font-size: 13px;
 }
 .sortBy {
   width: 90%;
@@ -263,6 +239,7 @@ p {
   display: flex;
   align-items: center;
   gap: 3px;
+  cursor: pointer;
 }
 .arrow {
   width: 8px;
@@ -281,14 +258,13 @@ p {
 .profile-button {
   display: flex;
   flex-direction: column;
-  /* margin-top: 100px; */
 }
 
 .show {
   display: grid;
   position: absolute;
   top: 70px;
-  right: 30px;
+  right: 3%;
   width: 120px;
   height: 100px;
   background-color: rgb(210, 193, 193);
@@ -339,17 +315,27 @@ p {
   align-items: center;
   gap: 20px;
 }
+
+.userName {
+  font-size: 21px;
+  font-weight: 500;
+}
+.userName:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .namee {
   width: 80px;
   height: 80px;
 }
 .name {
   color: #343333;
-  font-family: "DM Sans";
   font-size: 21.98px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  cursor: pointer;
+}
+.name:hover {
+  text-decoration: underline;
 }
 .userPrg {
   color: #343333;
@@ -372,6 +358,10 @@ p {
   gap: 15px;
   margin-bottom: 10px;
 }
+
+.arrowC img {
+  cursor: pointer;
+}
 .follow {
   width: 100px;
   height: 35px;
@@ -381,6 +371,13 @@ p {
   align-items: center;
   justify-content: center;
   color: #343333;
+}
+
+.follow:hover {
+  background-color: rgb(0, 157, 255);
+  color: white;
+  transition: 130ms;
+  cursor: pointer;
 }
 .statusPart {
   width: 90%;
@@ -404,15 +401,17 @@ p {
 }
 .comment {
   color: #343333;
-  font-family: "DM Sans";
   font-size: 15px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   display: flex;
   width: 90%;
   justify-content: end;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+.comment:hover {
+  text-decoration: underline;
 }
 .lin {
   width: 90%;
@@ -423,12 +422,13 @@ p {
   align-items: center;
   justify-content: start;
   color: #343333;
-  font-family: "DM Sans";
   font-size: 15px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   gap: 5px;
   margin-top: 16px;
   margin-bottom: 30px;
+  cursor: pointer;
+}
+.comments p:hover {
+  text-decoration: underline;
 }

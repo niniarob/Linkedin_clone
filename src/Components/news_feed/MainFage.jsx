@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import "./MainFage.css";
 import Assets from "./assets/Logo 1.png";
 import Crown from "./assets/crown 1.png";
-import Ellipse from "./assets/Ellipse 16.png";
 import Photo from "./assets/1 1.png";
 import Video from "./assets/2 1.png";
 import Event from "./assets/3 1.png";
@@ -10,19 +9,16 @@ import Article from "./assets/4 1.png";
 import Arrow from "./assets/Angle-down.png";
 import Post from "./Post";
 import { UserAuth } from "../../Context/Context";
-// import { getAuth, updateProfile } from "firebase/auth";
 import { colRef, db } from "../../firebase";
-
-
 import { useNavigate } from "react-router-dom";
 import AddFeed from "./AddFeed";
+import Footer from "../Footer";
 
 import {
   addDoc,
   onSnapshot,
   deleteDoc,
   doc,
-  Firestore,
   query,
   orderBy,
   serverTimestamp,
@@ -249,16 +245,15 @@ export default function FileUpload() {
             <h4>Add to your feed</h4>
             <div className="feedLists">
               {users.map((feed) => {
-                return <AddFeed img={Avatar} name={feed.userName} />;
+                return <AddFeed name={feed.userName} />;
               })}
             </div>
             <div></div>
           </div>
           <p className="recomendation">View all recommendations</p>
         </div>
-
       </main>
-      <footer></footer>
+      <Footer />
     </div>
   );
 }

@@ -17,8 +17,8 @@
   display: grid;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 20px;
-  margin-top: 8%;
+  gap: 10px;
+  margin-top: 2%;
   margin-left: 138px;
 }
 
@@ -32,7 +32,7 @@
   background-position: 100% 0%, 95% 80%, 80% 30%;
   display: flex;
   flex-direction: column;
-  gap: 20%;
+  justify-content: space-between;
 }
 
 .register-wrapper h1 {
@@ -91,6 +91,13 @@
 .register-wrapper p span {
   color: #0077b7;
   font-weight: 700;
+  font-size: 17px;
+}
+.register-wrapper p span {
+  opacity: 0.5;
+}
+.register-wrapper p span a {
+  opacity: 0.5;
 }
 
 .register-wrapper button {
@@ -103,10 +110,14 @@
   font-size: 20px;
   margin: auto;
 }
-.footer {
-  width: 80%;
-  display: flex;
-  margin: auto;
-  justify-content: baseline;
-  align-items: baseline;
+
+.register-wrapper button:hover {
+  opacity: 0.5;
+}
+
+.footer p {
+  font-size: 12px;
+}
+.footer p:hover {
+  opacity: 0.5;
 }

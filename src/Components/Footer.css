@@ -1,0 +1,93 @@
+.footer-navigation {
+  margin: auto;
+  display: flex;
+  gap: 90px;
+  margin-top: 200px;
+}
+
+.footer-logedin {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.column h3 {
+  font-size: 16px;
+  width: 150px;
+  font-weight: bold;
+  color: #343333;
+}
+
+.column p {
+  color: #747171;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.column p:hover {
+  text-decoration: underline;
+}
+
+.documentations {
+  margin: auto;
+  display: flex;
+  margin-top: 40px;
+  gap: 15px;
+}
+
+.documentations p {
+  color: #747171;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.documentations p:hover {
+  text-decoration: underline;
+}
+
+.copywrite {
+  color: #747171;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 400;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+  gap: 30px;
+}
+
+.flex h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #343333;
+}
+
+.flex p {
+  color: #747171;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.flex p:hover {
+  text-decoration: underline;
+}
+.flex p {
+  color: #747171;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.flex div {
+  display: grid;
+  gap: 15px;
+}
+
+.flex .second-column {
+  margin-top: 40px;
+  width: 100px;
+}

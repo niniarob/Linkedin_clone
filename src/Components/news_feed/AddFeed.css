@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Poppins:wght@300;400;500&display=swap");
 
-
 *,
 *::after,
 *::before {
@@ -16,65 +15,72 @@
   --headerBackColor: #f2f2f2;
 }
 
-
 .addToFeedPart {
-    border: 1px solid #cccccc;
-    height: 540px;
-    border-radius: 30px;
-    width: 361px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .feed {
-    margin-top: 30px;
-    width: 90%;
-  }
-  .userName {
-    color: #343333;
-    text-align: center;
-    font-family: "DM Sans";
-    font-size: 21.98px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  .feedLists {
-    display: flex;
-    flex-direction: column;
-    margin-top: 25px;
-    gap: 20px;
-  }
-  .lists {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-  }
-  .feedUsers {
-    color: #343333;
-    font-family: "DM Sans";
-    font-size: 14.653px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  .prg {
-    color: #343333;
-    font-family: "DM Sans";
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  .recomendation {
-    width: 90%;
-    margin-top: 20px;
-    color: #343333;
-    font-family: "DM Sans";
-    font-size: 14.653px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  
+  border: 1px solid #cccccc;
+  height: 540px;
+  border-radius: 30px;
+  width: 361px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.feed {
+  margin-top: 30px;
+  width: 90%;
+}
+.userName {
+  color: #343333;
+  text-align: center;
+  font-size: 21.98px;
+  font-weight: 500;
+}
+.feedLists {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  gap: 25px;
+}
+.lists {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.feedPhoto {
+  width: 80px;
+  border-radius: 50%;
+}
+.feedUsers {
+  color: #343333;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.feedUsers:hover {
+  text-decoration: underline;
+}
+
+.secLists {
+  display: grid;
+  gap: 3px;
+}
+.prg {
+  color: #343333;
+  font-size: 13px;
+  font-weight: 400;
+}
+.recomendation {
+  width: 90%;
+  margin-top: 20px;
+  color: #343333;
+  font-size: 14.653px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.recomendation:hover {
+  text-decoration: underline;
+}

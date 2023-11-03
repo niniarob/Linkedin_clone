@@ -57,8 +57,6 @@ const RegisterPage = () => {
     setEmail("");
     setPassword("");
 
-    // user.displayName = userName;
-    // console.log(user.displayName);
     console.log(user);
   };
 

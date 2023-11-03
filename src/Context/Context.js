@@ -4,11 +4,8 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-  // updateProfile,
 } from "firebase/auth";
 import { auth } from "../firebase";
-// import { db, colRef, addPost } from "../firebase";
-// import { addDoc, onSnapshot } from "firebase/firestore";
 
 const UserContext = createContext();
 
@@ -29,11 +26,6 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      // if (auth.currentUser == null) {
-      //   updateProfile(auth.currentUser, {
-      //     displayName: user.displayName,
-      //   });
-      // }
       console.log(currentUser);
       setUser(currentUser);
     });
