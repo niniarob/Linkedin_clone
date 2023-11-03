@@ -2,14 +2,30 @@ import React from "react";
 import Ellips from "./assets/Ellipse 16 (1).png";
 import Times from "./assets/Times.png";
 import Component from "./assets/Component 3.png";
-import Vlad from "./assets/Vlad.png";
+// import Vlad from "./assets/Vlad.png";
 import Coment from "./assets/Coment.png";
 
-const Post = ({ post, postsArr, handleDelete, userName }) => {
+
+
+const Post = ({
+  post,
+  postsArr,
+  handleDelete,
+  userName,
+  uploadImage,
+  defaultImage,
+}) => {
   return (
     <div className="postCard">
       <div className="userNameAndPhoto">
-        <img className="namee" src={Ellips} alt="Ellipse 16 (1)" />
+        {uploadImage ? (
+          <img
+            src={URL.createObjectURL(uploadImage)}
+            className="profile-photo"
+          />
+        ) : (
+          <img className="profile-photo" src={defaultImage} />
+        )}
         <div className="userNameText">
           <h3 className="name">{userName}</h3>
           <p className="userPrg">CEO, Innovation, Technology</p>
